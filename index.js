@@ -17,8 +17,14 @@ client.on('ready',()=>{
     console.log("in");
 })
 client.on('messageCreate',msg=>{
+    console.log(msg.author.username);
     if(msg.content == 'odoodo'){
         msg.reply(`บูมหน้าหี`)
     }
+    if(msg.author.username == 'Onelife'){
+        msg.reply(`${msg.author.username}หน้าหี`)
+    }
 } )
+
+
 client.login(process.env.TOKEN);
